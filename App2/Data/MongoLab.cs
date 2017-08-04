@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
+using Hardasaniye.Model;
 
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using App2.Model;
-
-namespace App2.Data
+namespace Hardasaniye.Data
 {
     public class MongoLab
     {
@@ -39,7 +30,7 @@ namespace App2.Data
             String baseUrl = $"https://api.mlab.com/api/1/databases/{dbName}/collections/{collectionName}";
             StringBuilder stringBuilder = new StringBuilder(baseUrl);
             stringBuilder.Append($"/?apiKey={apiKey}");
-            stringBuilder.Append(query);
+            stringBuilder.Append($"&q={{{query}}}");
             return stringBuilder.ToString();
         }
     }

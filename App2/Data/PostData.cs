@@ -2,11 +2,11 @@
 using Android.OS;
 using Android.Views;
 using Android.Widget;
-using App2.Model;
+using Hardasaniye.Model;
 using Newtonsoft.Json;
 using System;
 
-namespace App2.Data
+namespace Hardasaniye.Data
 {
     public class PostData : AsyncTask<string, Java.Lang.Void, string>
     {
@@ -18,7 +18,7 @@ namespace App2.Data
         {
             base.OnPreExecute();
             _pd.Window.SetType(WindowManagerTypes.SystemAlert);
-            _pd.SetTitle("Data gedirrr... ");
+            _pd.SetTitle("Sebrli ol... ");
             _pd.Show();
         }
         protected override string RunInBackground(params string[] @params)

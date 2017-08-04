@@ -4,7 +4,7 @@ using Java.Net;
 using Java.IO;
 using System.IO;
 
-namespace App2.Data
+namespace Hardasaniye.Data
 {
     public class HTTPDataHandler
     {

@@ -3,9 +3,9 @@ using Android.App;
 using Android.OS;
 using Android.Widget;
 using Newtonsoft.Json;
-using App2.Model;
+using Hardasaniye.Model;
 
-namespace App2.Data
+namespace Hardasaniye.Data
 {
     public class PutData : AsyncTask<string, Java.Lang.Void, string>
     {

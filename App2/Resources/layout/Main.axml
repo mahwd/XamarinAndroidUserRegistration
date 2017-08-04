@@ -1,49 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <EditText
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <fragment
+        android:id="@+id/map"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtName"
-        android:text="name" />
-    <EditText
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        class="com.google.android.gms.maps.MapFragment" />
+    <TextView
+        android:id="@+id/LatText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtAge"
-        android:text="age" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtMapRouteName"
-        android:text="mapRoute Name" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtCount"
-        android:text="Count" />
+        android:layout_height="0dp"
+        android:layout_weight="0" />
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <Button
-            android:text="Send"
-            android:layout_width="0dp"
+            android:id="@+id/btnStart"
+            android:text="Start Tracking"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnSend"
-            android:layout_weight="1" />
+            android:layout_gravity="fill_horizontal"
+            android:textSize="10dp" />
         <Button
-            android:text="Update"
-            android:layout_width="0dp"
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnUpdate"
-            android:layout_weight="1" />
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="1"
+            android:text="Save Route"
+            android:textSize="10dp" />
+        <Button
+            android:id="@+id/btnColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="1"
+            android:text="Route Color"
+            android:textSize="10dp" />
+        <Button
+            android:id="@+id/btnThrowMarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="1"
+            android:textSize="10dp"
+            android:text="throw marker" />
     </LinearLayout>
+    <TextView
+        android:id="@+id/listText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
     <ListView
         android:minWidth="25px"
-        android:minHeight="25px"
+        android:layout_weight="0"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/listUsers" />
+        android:layout_height="0dp"
+        android:id="@+id/mapList"
+        tools:visibility="invisible" />
 </LinearLayout>

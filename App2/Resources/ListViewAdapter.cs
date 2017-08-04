@@ -10,10 +10,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
-using App2.Model;
-using App2.Data;
+using Hardasaniye.Model;
+using Hardasaniye.Data;
 
-namespace App2.Resources
+namespace Hardasaniye.Resources
 {
     class ListViewAdapter : BaseAdapter
     {
@@ -61,8 +61,8 @@ namespace App2.Resources
             var edtCount = view.FindViewById<TextView>(Resource.Id.txtCount);
             edtName.Text = _users[position].name;
             edtAge.Text = _users[position].age.ToString();
-            edtMapRouteName.Text = _users[position].maproute.name;
-            edtCount.Text = _users[position].maproute.count.ToString();
+            //edtMapRouteName.Text = _users[position].maproutes.Routename;
+            //edtCount.Text = _users[position].maproutes.RouteWayPoints.ToString();
                 
             return view;
         }
